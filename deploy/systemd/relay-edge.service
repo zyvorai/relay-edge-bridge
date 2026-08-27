@@ -1,0 +1,23 @@
+[Unit]
+Description=Relay Edge protocol bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=relay-edge
+Group=relay-edge
+ExecStart=/usr/local/bin/relay-edge -config /etc/relay-edge/config.json
+Restart=always
+RestartSec=3
+StateDirectory=relay-edge
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/relay-edge
+AmbientCapabilities=
+CapabilityBoundingSet=
+
+[Install]
+WantedBy=multi-user.target

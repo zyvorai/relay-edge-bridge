@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --re-bg: #03040b;
+  --re-panel: #0a0d15;
+  --re-panel-glass: rgba(10, 13, 21, 0.72);
+  --re-border: rgba(148, 163, 184, 0.14);
+  --re-border-strong: rgba(148, 163, 184, 0.28);
+  --re-text: #e6e9f2;
+  --re-text-dim: #8b93a7;
+
+  --re-cyan: #00e5ff;
+  --re-purple: #8b5cf6;
+
+  --re-healthy: #00e676;
+  --re-attention: #ffb300;
+  --re-critical: #ff3d57;
+  --re-notifying: #40c4ff;
+  --re-escalated: #d500f9;
+  --re-verified: #00e5ff;
+  --re-info: #9ca3af;
+}
+
+:root[data-theme="light"] {
+  --re-bg: #f4f5f8;
+  --re-panel: #ffffff;
+  --re-panel-glass: rgba(255, 255, 255, 0.8);
+  --re-border: rgba(15, 23, 42, 0.1);
+  --re-border-strong: rgba(15, 23, 42, 0.18);
+  --re-text: #0f1115;
+  --re-text-dim: #5b6472;
+}
+
+@theme inline {
+  --color-bg: var(--re-bg);
+  --color-panel: var(--re-panel);
+  --color-border: var(--re-border);
+  --color-text: var(--re-text);
+  --color-text-dim: var(--re-text-dim);
+
+  --color-cyan: var(--re-cyan);
+  --color-purple: var(--re-purple);
+
+  --color-healthy: var(--re-healthy);
+  --color-attention: var(--re-attention);
+  --color-critical: var(--re-critical);
+  --color-notifying: var(--re-notifying);
+  --color-escalated: var(--re-escalated);
+  --color-verified: var(--re-verified);
+  --color-info: var(--re-info);
+
+  --font-mono: var(--font-jetbrains-mono);
+  --font-body: var(--font-ibm-plex-sans);
+  --font-display: var(--font-outfit);
+}
+
+body {
+  background: var(--re-bg);
+  color: var(--re-text);
+  font-family: var(--font-body), -apple-system, sans-serif;
+  background-image:
+    radial-gradient(60rem 30rem at 15% -10%, rgba(139, 92, 246, 0.16), transparent 60%),
+    radial-gradient(50rem 25rem at 100% 0%, rgba(0, 229, 255, 0.12), transparent 55%);
+  background-attachment: fixed;
+}
+
+.glass {
+  background: var(--re-panel-glass);
+  border: 1px solid var(--re-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--re-cyan), var(--re-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

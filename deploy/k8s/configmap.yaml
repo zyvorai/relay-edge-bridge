@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: relay-edge-config
+  namespace: relay-edge
+data:
+  config.json: |
+    {
+      "tenant":"acme",
+      "site":"plant-01",
+      "gateway":"edge-gw-01",
+      "listen":":8080",
+      "spool_dir":"/var/lib/relay-edge/spool",
+      "relay":{"endpoint":"http://relay.default.svc.cluster.local:8080/v1/events","timeout_ms":3000},
+      "devices":[
+        {
+          "id":"pump-17",
+          "protocol":"modbus-tcp",
+          "endpoint":"10.20.0.17:502",
+          "unit_id":1,
+          "interval_ms":2000,
+          "priority":1,
+          "signals":[
+            {"name":"temperature_c","address":0,"data_type":"uint16","scale":0.1},
+            {"name":"pressure_bar","address":1,"data_type":"uint16","scale":0.1},
+            {"name":"rpm","address":2,"data_type":"uint16"},
+            {"name":"rpm_setpoint","address":10,"data_type":"uint16","writable":true}
+          ]
+        }
+      ]
+    }

@@ -1,0 +1,25 @@
+{
+  "tenant": "acme",
+  "site": "plant-01",
+  "gateway": "edge-gw-01",
+  "listen": "127.0.0.1:18080",
+  "spool_dir": "./spool",
+  "relay": {"endpoint": "http://127.0.0.1:18081/v1/events", "timeout_ms": 3000},
+  "devices": [
+    {
+      "id":"pump-17", "protocol":"modbus-tcp", "endpoint":"127.0.0.1:11502",
+      "unit_id":1, "interval_ms":2000, "priority":1,
+      "signals":[
+        {"name":"temperature_c","address":0,"data_type":"uint16","scale":0.1},
+        {"name":"pressure_bar","address":1,"data_type":"uint16","scale":0.1},
+        {"name":"rpm","address":2,"data_type":"uint16"},
+        {"name":"rpm_setpoint","address":10,"data_type":"uint16","writable":true}
+      ]
+    },
+    {
+      "id":"mqtt-factory", "protocol":"mqtt", "endpoint":"mqtt://127.0.0.1:11883",
+      "topic":"factory/+/+/telemetry", "client_id":"relay-edge-factory", "priority":2,
+      "signals":[{"name":"rpm_command","writable":true,"topic":"factory/plant-01/pump-17/command"}]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+services:
+  relay-mock:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.mock
+    command: ["-listen", ":8081"]
+    ports: ["8081:8081"]
+
+  modbus-sim:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.sim
+    command: ["-mode", "modbus", "-listen", ":1502"]
+    ports: ["1502:1502"]
+
+  mqtt-sim:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.sim
+    command: ["-mode", "mqtt-broker", "-listen", ":1883"]
+    ports: ["1883:1883"]
+
+  relay-edge:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile
+    command: ["-config", "/etc/relay-edge/config.json"]
+    depends_on: [relay-mock, modbus-sim, mqtt-sim]
+    volumes:
+      - ./examples/config.json:/etc/relay-edge/config.json:ro
+      - relay-spool:/var/lib/relay-edge/spool
+    ports: ["8080:8080"]
+
+  mqtt-sensor:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.sim
+    command: ["-mode", "mqtt-sensor", "-endpoint", "mqtt://mqtt-sim:1883", "-topic", "factory/plant-01/pump-17/telemetry", "-device", "pump-17"]
+    depends_on: [mqtt-sim]
+    restart: unless-stopped
+
+volumes:
+  relay-spool: {}
