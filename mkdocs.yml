@@ -1,0 +1,39 @@
+site_name: relay-edge-bridge
+site_description: Protocol-neutral IoT/industrial edge bridge for Zyvor Relay — Modbus, MQTT, HTTP ingest, verified actions, durable spool, and an operator console.
+site_url: https://zyvorai.github.io/relay-edge-bridge/
+repo_url: https://github.com/zyvorai/relay-edge-bridge
+repo_name: zyvorai/relay-edge-bridge
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle: {icon: material/brightness-7, name: Switch to dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle: {icon: material/brightness-4, name: Switch to light mode}
+  features: [navigation.tabs, navigation.sections, navigation.top, navigation.footer, content.code.copy, search.suggest, search.highlight, toc.follow]
+plugins: [search]
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: {alternate_style: true}
+  - pymdownx.tasklist: {custom_checkbox: true}
+  - tables
+  - toc: {permalink: true}
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+extra:
+  social:
+    - {icon: fontawesome/brands/github, link: https://github.com/zyvorai/relay-edge-bridge}
