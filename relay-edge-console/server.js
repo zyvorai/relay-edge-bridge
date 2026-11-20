@@ -1,3 +1,6 @@
+// Copyright 2026 Zyvor AI Labs · https://zyvor.dev
+// SPDX-License-Identifier: LicenseRef-Zyvor-Production-1.0
+
 // Custom HTTPS server for production deploys that don't sit behind a
 // reverse proxy already terminating TLS. Dev (`npm run dev`) still uses
 // Next's own plain-HTTP server; this is only used by `npm run start:https`.

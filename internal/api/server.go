@@ -1,3 +1,6 @@
+// Copyright 2026 Zyvor AI Labs · https://zyvor.dev
+// SPDX-License-Identifier: LicenseRef-Zyvor-Production-1.0
+
 // Package api implements the operator-console HTTP surface (/v1/console/*)
 // for a relay-edge gateway: device health/digital-shadow, a live SSE event
 // feed, action history, and offline/store-and-forward visibility. It is
