@@ -8,7 +8,6 @@ The architectural boundary is deliberate:
 - **Relay Edge** owns edge/device protocol churn: Modbus, MQTT, HTTP, OPC-UA plugins, simulators and gateway deployment.
 - Vendor products are integrations, not dependencies. No Armada, Siemens, Schneider, Rockwell, AWS, GCP or Zyvor proprietary API is required by the core.
 
-[Client overview (PDF)](docs/Relay-Edge-Client-Overview.pdf)
 
 ## Why a separate project?
 
