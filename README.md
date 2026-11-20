@@ -275,7 +275,7 @@ and has been exercised end-to-end with the included Modbus and MQTT simulators p
 
 ## License model
 
-License: **Zyvor Production License v1.0** for the core, adapters and simulators (a commercial license is required to run it, sales@zyvor.dev). Enterprise fleet management, policy packs, signed device catalogs and long-term support remain commercial products.
+License: **Zyvor Production License v1.0** for the core, adapters and simulators (free for evaluation, development, testing, research, education and other non-production use; any production use needs a paid commercial license from ZyvorAI Labs Private Limited, see [pricing](https://zyvor.dev/pricing)). Enterprise fleet management, policy packs, signed device catalogs and long-term support remain commercial products.
 
 ## Repository relationship
 
@@ -294,4 +294,4 @@ Do not rename `relay` into an IoT product. Its generality is the strategic advan
 
 ## Support
 
-A commercial license is required to run it (sales@zyvor.dev); a 30-day trial key is how to evaluate. If it helps you, you can donate any amount you like: <https://rzp.io/rzp/utwdYh3>. A donation is voluntary and supports development and maintenance. It is not a purchase: it buys no support, SLA, features, priority or license, and it is not tax-deductible (Zyvor AI Labs Private Limited is a company, not a charity). Support contracts are separate: [sales@zyvor.dev](mailto:sales@zyvor.dev).
+Production use needs a paid commercial license ([pricing](https://zyvor.dev/pricing)); a 30-day trial key is available at <https://zyvor.dev/trial/start>. If it helps you, you can donate any amount you like: <https://rzp.io/rzp/utwdYh3>. A donation is voluntary and supports development and maintenance. It is not a purchase: it buys no support, SLA, features, priority or license, and it is not tax-deductible (Zyvor AI Labs Private Limited is a company, not a charity). Support contracts are separate: [sales@zyvor.dev](mailto:sales@zyvor.dev).
