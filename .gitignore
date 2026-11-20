@@ -1,0 +1,8 @@
+/bin/
+*.log
+*.tmp
+.DS_Store
+/config.local.json
+/spool/
+/demo-spool/
+/demo-actionlog/

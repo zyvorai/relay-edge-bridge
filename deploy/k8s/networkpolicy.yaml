@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: relay-edge-default
+  namespace: relay-edge
+spec:
+  podSelector:
+    matchLabels: {app: relay-edge}
+  policyTypes: [Ingress, Egress]
+  ingress:
+    - from:
+        - namespaceSelector: {}
+      ports:
+        - {protocol: TCP, port: 8080}
+  # Replace these broad egress blocks with site-specific device, DNS and Relay CIDRs.
+  egress:
+    - to:
+        - namespaceSelector: {}
+    - to:
+        - ipBlock: {cidr: 10.0.0.0/8}
+    - to:
+        - ipBlock: {cidr: 172.16.0.0/12}
+    - to:
+        - ipBlock: {cidr: 192.168.0.0/16}

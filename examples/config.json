@@ -1,0 +1,44 @@
+{
+  "tenant": "acme",
+  "site": "plant-01",
+  "gateway": "edge-gw-01",
+  "listen": ":8080",
+  "spool_dir": "/var/lib/relay-edge/spool",
+  "action_log_dir": "/var/lib/relay-edge/actionlog",
+  "relay": {
+    "endpoint": "http://relay-mock:8081/v1/events",
+    "timeout_ms": 3000
+  },
+  "console": {
+    "token": "dev-console-token",
+    "allow_origin": "http://localhost:3000"
+  },
+  "devices": [
+    {
+      "id": "pump-17",
+      "protocol": "modbus-tcp",
+      "endpoint": "modbus-sim:1502",
+      "unit_id": 1,
+      "interval_ms": 2000,
+      "priority": 1,
+      "signals": [
+        {"name":"temperature_c","kind":"holding","address":0,"data_type":"uint16","scale":0.1},
+        {"name":"pressure_bar","kind":"holding","address":1,"data_type":"uint16","scale":0.1},
+        {"name":"rpm","kind":"holding","address":2,"data_type":"uint16","scale":1},
+        {"name":"rpm_setpoint","kind":"holding","address":10,"data_type":"uint16","scale":1,"writable":true}
+      ]
+    },
+    {
+      "id": "mqtt-factory",
+      "protocol": "mqtt",
+      "endpoint": "mqtt://mqtt-sim:1883",
+      "topic": "factory/+/+/telemetry",
+      "client_id": "relay-edge-factory",
+      "interval_ms": 1000,
+      "priority": 2,
+      "signals": [
+        {"name":"rpm_command","writable":true,"topic":"factory/plant-01/pump-17/command"}
+      ]
+    }
+  ]
+}
