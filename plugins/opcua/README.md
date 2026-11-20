@@ -28,4 +28,4 @@ Bridge selected nodes into relay-edge:
   -node pressure='ns=2;s=Pressure'
 ```
 
-This plugin is Apache-2.0; its upstream `gopcua` dependency is MIT licensed.
+This plugin is Zyvor Production License; its upstream `gopcua` dependency is MIT licensed.

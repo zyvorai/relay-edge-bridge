@@ -2,7 +2,7 @@
 
 **Protocol-neutral edge bridge for [Zyvor Relay](https://github.com/zyvorai/relay).** It converts physical and IoT protocols into a canonical CloudEvents-compatible envelope, durably spools events during WAN loss, forwards them to any Relay-compatible HTTP endpoint, and translates normalized actions back to devices.
 
-Apache-2.0 · [source on GitHub](https://github.com/zyvorai/relay-edge-bridge)
+Zyvor Production License · [source on GitHub](https://github.com/zyvorai/relay-edge-bridge)
 
 ## Boundary
 
