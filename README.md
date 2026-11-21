@@ -275,7 +275,7 @@ and has been exercised end-to-end with the included Modbus and MQTT simulators p
 
 ## License model
 
-License: **Zyvor Production License v1.0** for the core, adapters and simulators (free for a 30-day evaluation (development, testing, research, education); any production use needs a paid commercial license from ZyvorAI Labs Private Limited, see [pricing](https://zyvor.dev/pricing)). Enterprise fleet management, policy packs, signed device catalogs and long-term support remain commercial products.
+License: **Zyvor Production License v1.0** for the core, adapters and simulators (free for a 30-day evaluation (development, testing, research, education); any production use needs a paid commercial license from ZyvorAI Labs Private Limited, see [pricing](https://zyvor.dev/pricing)). Enterprise fleet management, policy packs, signed device catalogs and long-term support remain commercial products. Support from USD 8-18 per device per year (INR 793-1,784 incl. GST in India), USD 5,000 (INR 495,600) annual minimum; buy / get a quote at [zyvor.dev/buy](https://zyvor.dev/buy). Orders of USD 5,000 or more and quotes are invoiced in USD through Skydo.
 
 ## Repository relationship
 
