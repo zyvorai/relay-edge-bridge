@@ -2,7 +2,7 @@
 
 **Protocol-neutral edge bridge for Zyvor Relay.** It converts physical and IoT protocols into a canonical CloudEvents-compatible envelope, durably spools events during WAN loss, forwards them to any Relay-compatible HTTP endpoint, and translates normalized actions back to devices.
 
-[Zyvor Production License v1.0](https://zyvor.dev/pricing): free for non-production use; production use needs a paid commercial license · [repository](https://github.com/zyvorai/relay-edge-bridge)
+[Zyvor Production Licence v2.0](https://zyvor.dev/pricing): a 30-day trial is available on request from sales@zyvor.dev (a paid evaluation Order at no charge); production and any other use needs a paid Order · [repository](https://github.com/zyvorai/relay-edge-bridge)
 
 ## Boundary
 

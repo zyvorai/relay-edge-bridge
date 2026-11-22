@@ -1,5 +1,5 @@
 // Copyright 2026 Zyvor AI Labs · https://zyvor.dev
-// SPDX-License-Identifier: LicenseRef-Zyvor-Production-1.0
+// SPDX-License-Identifier: LicenseRef-Zyvor-Production-2.0
 
 // Mirrors the JSON shapes served by relay-edge's /v1/console/* API
 // (internal/api/handlers.go, internal/registry, internal/actionlog).

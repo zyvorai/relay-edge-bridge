@@ -275,7 +275,7 @@ and has been exercised end-to-end with the included Modbus and MQTT simulators p
 
 ## License model
 
-License: **Zyvor Production License v1.0** for the core, adapters and simulators (free for a 30-day evaluation (development, testing, research, education); any production use needs a paid commercial license from ZyvorAI Labs Private Limited, see [pricing](https://zyvor.dev/pricing)). Enterprise fleet management, policy packs, signed device catalogs and long-term support remain commercial products. Support from USD 8-18 per device per year (INR 793-1,784 incl. GST in India), USD 5,000 (INR 495,600) annual minimum; buy / get a quote at [zyvor.dev/buy](https://zyvor.dev/buy). Orders of USD 5,000 or more and quotes are invoiced in USD through Skydo.
+License: **Zyvor Production Licence v2.0** for the core, adapters and simulators. A 30-day trial is available on request from sales@zyvor.dev (a paid evaluation Order at no charge); production and any other use needs a paid Order (see [pricing](https://zyvor.dev/pricing)). Enterprise fleet management, policy packs, signed device catalogs and long-term support remain commercial products. Support from USD 8-18 per device per year (INR 793-1,784 incl. GST in India), USD 5,000 (INR 495,600) annual minimum; buy / get a quote at [zyvor.dev/buy](https://zyvor.dev/buy). Orders of USD 5,000 or more and quotes are invoiced in USD through Skydo.
 
 ## Repository relationship
 
@@ -294,4 +294,4 @@ Do not rename `relay` into an IoT product. Its generality is the strategic advan
 
 ## Support
 
-Production use needs a paid commercial license ([pricing](https://zyvor.dev/pricing)); a 30-day trial key is available at <https://zyvor.dev/trial/start>. If it helps you, you can donate any amount you like: <https://rzp.io/rzp/utwdYh3>. A donation is voluntary and supports development and maintenance. It is not a purchase: it buys no support, SLA, features, priority or license, and it is not tax-deductible (Zyvor AI Labs Private Limited is a company, not a charity). Support contracts are separate: [sales@zyvor.dev](mailto:sales@zyvor.dev).
+A 30-day trial is available on request from sales@zyvor.dev (a paid evaluation Order at no charge); production and any other use needs a paid Order under the Zyvor Production Licence v2.0. If it helps you, you can donate any amount you like: <https://rzp.io/rzp/utwdYh3>. A donation is voluntary and supports development and maintenance. It is not a purchase: it buys no support, SLA, features, priority or license, and it is not tax-deductible (Zyvor AI Labs Private Limited is a company, not a charity). Support contracts are separate: [sales@zyvor.dev](mailto:sales@zyvor.dev).
